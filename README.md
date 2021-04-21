@@ -4,12 +4,12 @@ Python3 module for image recognision in ArtWay project. Implemented with ```Fast
 
 **Contents:**
 * [Setup](#setup)
-* [Running the app](#run)
+* [Running the app](#running)
 * [Docs](#docs)
 
 
 # Setup 
-<a name="first"></a>
+<a name="setup"></a>
 Clone the repo. It is recommended to create a python3 virtual environment for your system and work in it:
 
 ```
@@ -30,7 +30,7 @@ Install requirements:
 ```
 
 # Running the app
-<a name="first"></a>
+<a name="running"></a>
 ```
 (venv) uvicorn main:app
 ```
