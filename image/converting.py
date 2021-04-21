@@ -18,7 +18,7 @@ def base64_to_image(base64_str: bytes):
 
     bytes_data = base64.b64decode(base64_str)
     image_data = BytesIO(bytes_data)
-    image = Image.open(image_data)
+    image = Image.open(image_data).convert('RGB')
     return image
 
 
