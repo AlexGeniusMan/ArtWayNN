@@ -1,6 +1,11 @@
 name: build
 
-on: [push]
+on:
+  push:
+    branches:    
+      - 'develop'
+    paths-ignore:
+      - 'README.md'
 
 jobs:
   buildx:
