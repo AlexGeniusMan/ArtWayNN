@@ -2,10 +2,10 @@ import tensorflow as tf
 import numpy as np
 import pathlib
 
-from image import base64_to_image, image_to_numpy
+from app.image import base64_to_image, image_to_numpy
 
 
-MODEL_PATH = 'net/quant_model.tflite'
+MODEL_PATH = 'app/net/quant_model.tflite'
 IMAGE_SIZE = 64
 
 

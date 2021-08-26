@@ -1,2 +1,2 @@
 # ArtWayNN
-![Pytest](https://github.com/RTUITLab/ArtWayNN/blob/develop/.github/workflows/python-package.yml/badge.svg)
+![Pytest](https://github.com/RTUITLab/ArtWayNN/actions/workflows/python-package.yml/badge.svg)

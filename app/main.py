@@ -1,7 +1,8 @@
 from fastapi import FastAPI
-from net import predict
 from pydantic import BaseModel
 from typing import List
+
+from app.net import predict
 
 
 class Image(BaseModel):

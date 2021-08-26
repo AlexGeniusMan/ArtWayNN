@@ -3,7 +3,7 @@ import pytest
 
 from httpx import AsyncClient
 
-from main import app
+from app.main import app
 
 
 def get_base64_str(path: str):
