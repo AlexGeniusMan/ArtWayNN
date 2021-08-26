@@ -1,7 +1,7 @@
 # ArtWayNN
-![Python 3.6](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.6.yml/badge.svg)
-![Python 3.7](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.7.yml/badge.svg)
-![Python 3.8](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.8.yml/badge.svg)
+![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.6.yml/badge.svg)
+![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.7.yml/badge.svg)
+![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.8.yml/badge.svg)
 
 
 **Contents:**
