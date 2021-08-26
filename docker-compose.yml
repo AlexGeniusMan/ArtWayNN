@@ -1,0 +1,7 @@
+version: "3.8"
+
+services: 
+  artway-nn:
+    build: .
+    ports: 
+      - 5000:8000

@@ -9,7 +9,7 @@ class Image(BaseModel):
     base64_str: bytes
 
 
-app = FastAPI(title="ArtWayNN")
+app = FastAPI(title="ArtWayNN", redoc_url=None)
 
 
 @app.post('/predict/', response_model=List[float], tags=["Predict"])
