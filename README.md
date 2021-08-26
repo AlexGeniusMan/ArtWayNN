@@ -1,45 +1,70 @@
 # ArtWayNN
 
-Python3 module for image recognision in ArtWay project. Implemented with ```FastAPI``` and ```TensorFlow```.
+
+| Python | Docker |
+|-----------|-----------|
+| ![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.6.yml/badge.svg) ![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.7.yml/badge.svg) ![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.8.yml/badge.svg) | ![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/docker.yml/badge.svg) |
 
 **Contents:**
-* [Setup](#setup)
-* [Running the app](#running)
+* [Run service](#run)
 * [Docs](#docs)
+* [Usage](#usage)
 
 
-# Setup 
+## Run service
+<a name="run"></a>
+
+### With Docker
+Build:
+
+`docker build -t artwaynn .`
+
+And run
+
+`docker run -it -p 5000:8000 artwaynn`
+
+### With Docker Compose
+With docker-compose service start up at 5000 port by default:
+
+`docker-compose up --build`
+
+or
+
+`docker-compose up --build -d` in daemon mode
+
+
+## Docs
 <a name="setup"></a>
-Clone the repo. It is recommended to create a python3 virtual environment for your system and work in it:
+Documentation is available at [http://localhost:5000/docs](http://localhost:5000/docs)
 
-```
-python3 -m venv venv
-```
-Activate ```venv``` for Windows system:
-```
-venv\Scripts\activate
-```
-or for Linux:
-```
-source venv/bin/activate
-```
-Install requirements:
-```
-(venv) python3 -m pip install --upgrade pip
-(venv) pip install -r requirements.txt
-```
 
-# Running the app
-<a name="running"></a>
+## Usage
+<a name="usage"></a>
+:warning:There may be another hostname instead of `localhost`. 
 ```
-(venv) uvicorn main:app
+import base64
+import requests
+
+def get_image_label(path: str):
+    index_to_label = {
+        0: "Test",
+        1: "Medal",
+        2: "PC",
+        3: "Search",
+        4: "Projector",
+        5: "Idea",
+        6: "Telescope",
+        7: "Briefcase",
+        8: "Trofy",
+        9: "Cap",
+    }
+
+    with open(path, "rb") as img_file:
+        base64_str = base64.b64encode(img_file.read()).decode("utf-8")
+    response = requests.post("http://localhost:5000/predict/", json={"base64_str": base64_str})
+
+    preds = response.json()
+    index = preds.index(max(preds))
+
+    return index_to_label[index]
 ```
-
-The app runs on ```http://127.0.0.1:8000```
-
-# Docs
-<a name="docs"></a>
-Swagger is available by ```http://127.0.0.1:8000/docs```
-
-Alternative API - ```http://127.0.0.1:8000/redoc```
-
