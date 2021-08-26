@@ -38,6 +38,6 @@ def predict(base64_str: bytes) -> int:
 
     # make prediction
     predictions = interpreter.get_tensor(output_index)
-    label_id = int(np.argmax(predictions[0]))
+    predictions = tf.nn.softmax(predictions[0]).numpy()
 
-    return label_id
+    return predictions.tolist()
