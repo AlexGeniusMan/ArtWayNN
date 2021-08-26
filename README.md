@@ -26,7 +26,7 @@ Documentation is available at [http://localhost:5000/docs](http://localhost:5000
 
 ## Usage
 <a name="usage"></a>
-:warning: There may be another hostname instead of `localhost`. 
+:warning:There may be another hostname instead of `localhost`. 
 ```
 import base64
 import requests
