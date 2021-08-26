@@ -5,7 +5,7 @@ import pathlib
 from image import base64_to_image, image_to_numpy
 
 
-MODEL_PATH = 'net\quant_model.tflite'
+MODEL_PATH = 'net/quant_model.tflite'
 IMAGE_SIZE = 64
 
 
