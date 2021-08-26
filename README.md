@@ -1,17 +1,27 @@
 # ArtWayNN
-![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.6.yml/badge.svg)
-![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.7.yml/badge.svg)
-![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.8.yml/badge.svg)
 
+
+| **Python** | ![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.6.yml/badge.svg) ![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.7.yml/badge.svg) ![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/3.8.yml/badge.svg) |
+|-----------|-----------|
+| **Docker** | ![example workflow](https://github.com/RTUITLab/ArtWayNN/actions/workflows/docker.yml/badge.svg) |
 
 **Contents:**
-* [Run with Docker](#run)
+* [Run service](#run)
 * [Docs](#docs)
 * [Usage](#usage)
 
 
-## Run with Docker
+## Run service
 <a name="run"></a>
+
+### With Docker
+Build:
+`docker build -t artwaynn .`
+And run
+`docker run -it -p 5000:8000 artwaynn`
+
+### With Docker Compose
+With docker-compose service start up at 5000 port by default:
 `docker-compose up --build`
 
 or
